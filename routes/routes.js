@@ -43,6 +43,16 @@ router.get('/getOne/:id', async (req, res) => {
   }
 })
 
+router.get('/dailyScoop/', async (req,res) => {
+  try{
+    const data = await Model.find().sort({date: -1})
+  }
+  catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+})
+
+
 //Update by ID Method
 router.patch('/update/:id', async (req, res) => {
   try {
