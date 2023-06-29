@@ -43,7 +43,7 @@ router.get('/getOne/:id', async (req, res) => {
   }
 })
 
-router.get('/dailyScoop/', async (req,res) => {
+router.get('/dailyScoop', async (req,res) => {
   try{
     const data = await Model.find().sort({date: -1})
   }
